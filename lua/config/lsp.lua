@@ -11,7 +11,7 @@ vim.lsp.enable("clangd")
 
 vim.diagnostic.config({
 	virtual_text = true, -- this make error text show up why tf is it not on by default 😭
-	--virtual_lines = true,
+	virtual_lines = false,
 	update_in_insert = true,
 })
 
