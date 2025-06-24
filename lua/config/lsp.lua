@@ -8,6 +8,7 @@ vim.lsp.config["rust-analyzer"] = {
 }
 
 vim.lsp.enable("clangd")
+vim.lsp.enable("rust-analyzer")
 
 vim.diagnostic.config({
 	virtual_text = true, -- this make error text show up why tf is it not on by default 😭
