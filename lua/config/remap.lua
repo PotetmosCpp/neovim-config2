@@ -20,6 +20,8 @@ vim.keymap.set({"i", "n"}, "<F5>", function()
 
 	if vim.fn.filereadable(vim.fn.getcwd() .. "/Cargo.toml") == 1 then
 		vim.cmd("!cargo run")
+	elseif vim.fn.filereadable(vim.fn.getcwd() .. "/build.zig") == 1 then
+		vim.cmd("!zig build run")
 	elseif vim.fn.filereadable(vim.fn.getcwd() .. "/makefile") == 1 or
 		vim.fn.filereadable(vim.fn.getcwd() .. "/Makefile") == 1 then	-- lua 😡
 		vim.cmd("!make")

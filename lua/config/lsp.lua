@@ -6,9 +6,14 @@ vim.lsp.config["rust-analyzer"] = {
 	cmd = { "rust-analyzer" },
 	filetypes = { "rs", "rust" }
 }
+vim.lsp.config["zls"] = {
+	cmd = { "zls" },
+	filetypes = { "zig" }
+}
 
 vim.lsp.enable("clangd")
 vim.lsp.enable("rust-analyzer")
+vim.lsp.enable("zls")
 
 vim.diagnostic.config({
 	virtual_text = true, -- this make error text show up why tf is it not on by default 😭
