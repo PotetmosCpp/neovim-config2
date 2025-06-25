@@ -18,12 +18,12 @@ vim.keymap.set({"n"}, "<F5>", function()
 		vim.cmd("wa")
 	end]]--
 
-	if vim.fn.filereadable(vim.fn.getcwd() .. "/Cargo.toml") == 1 then
+	if vim.fn.filereadable(vim.fn.getcwd() .. "/makefile") == 1 then
+		vim.cmd("!make")
+	elseif vim.fn.filereadable(vim.fn.getcwd() .. "/Cargo.toml") == 1 then
 		vim.cmd("!cargo run")
 	elseif vim.fn.filereadable(vim.fn.getcwd() .. "/build.zig") == 1 then
 		vim.cmd("!zig build run")
-	elseif vim.fn.filereadable(vim.fn.getcwd() .. "/makefile") == 1 then
-		vim.cmd("!make")
 	elseif vim.fn.filereadable(vim.fn.getcwd() .. "/go.mod") == 1 then
 		vim.cmd("!go run src/main.go")
 	else
