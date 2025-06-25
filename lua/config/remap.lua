@@ -13,7 +13,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 --vim.keymap.set({"i", "n"}, "<F5>", "w:\n:!cargo run\n")
 
-vim.keymap.set({"i", "n"}, "<F5>", function()
+vim.keymap.set({"n"}, "<F5>", function()
 	if vim.bo.modified then
 		vim.cmd("wa")
 	end
@@ -33,7 +33,9 @@ end)
 vim.keymap.set("n", "<leader>ww", function()
 	vim.cmd("w")
 end)
-
 vim.keymap.set("n", "<leader>wa", function()
 	vim.cmd("wa")
+end)
+vim.keymap.set("n", "<leader>wq", function()
+	vim.cmd("wq")
 end)
