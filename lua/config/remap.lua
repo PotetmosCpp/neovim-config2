@@ -14,17 +14,18 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 --vim.keymap.set({"i", "n"}, "<F5>", "w:\n:!cargo run\n")
 
 vim.keymap.set({"n"}, "<F5>", function()
-	if vim.bo.modified then
+	--[[if vim.bo.modified then
 		vim.cmd("wa")
-	end
+	end]]--
 
 	if vim.fn.filereadable(vim.fn.getcwd() .. "/Cargo.toml") == 1 then
 		vim.cmd("!cargo run")
 	elseif vim.fn.filereadable(vim.fn.getcwd() .. "/build.zig") == 1 then
 		vim.cmd("!zig build run")
-	elseif vim.fn.filereadable(vim.fn.getcwd() .. "/makefile") == 1 or
-		vim.fn.filereadable(vim.fn.getcwd() .. "/Makefile") == 1 then	-- lua 😡
+	elseif vim.fn.filereadable(vim.fn.getcwd() .. "/makefile") == 1 then
 		vim.cmd("!make")
+	elseif vim.fn.filereadable(vim.fn.getcwd() .. "/go.mod") == 1 then
+		vim.cmd("!go run src/main.go")
 	else
 		print("bitch")
 	end
