@@ -10,10 +10,15 @@ vim.lsp.config["zls"] = {
 	cmd = { "zls" },
 	filetypes = { "zig" }
 }
+vim.lsp.config["gopls"] = {
+	cmd = { "gopls" },
+	filetypes = { "go" }
+}
 
 vim.lsp.enable("clangd")
 vim.lsp.enable("rust-analyzer")
 vim.lsp.enable("zls")
+vim.lsp.enable("gopls")
 
 vim.diagnostic.config({
 	virtual_text = true, -- this make error text show up why tf is it not on by default 😭
