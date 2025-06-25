@@ -21,7 +21,7 @@ return {
 		"rebelot/kanagawa.nvim",
 		config = function()
 			require("kanagawa").setup({
-				transparent = true,
+				--[[transparent = true,
 				colors = {
 					theme = {
 						all = {
@@ -46,7 +46,7 @@ return {
 						TelescopeResultsBorder = { bg = "none" },
 						TelescopePreviewBorder = { bg = "none" },
 					}
-				end
+				end]]--
 			})
 
 			vim.cmd("colorscheme kanagawa")
