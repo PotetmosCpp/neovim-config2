@@ -11,7 +11,26 @@ vim.keymap.set({"n", "v"}, "<leader>d", "\"_d")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set("n", "<leader>tt", vim.cmd.terminal)
+-- ai stuff but it works so who cares
+vim.keymap.set("n", "<leader>cc", function()
+    local current_cc_value = vim.opt.colorcolumn:get()
+    local current_cc_string = ""
+    if type(current_cc_value) == 'table' then
+        local parts = {}
+        for _, v in ipairs(current_cc_value) do
+            table.insert(parts, tostring(v))
+        end
+        current_cc_string = table.concat(parts, ",")
+    else
+        current_cc_string = tostring(current_cc_value)
+    end
+
+    if current_cc_string:find("100") then
+        vim.opt.colorcolumn = "0"
+    else
+        vim.opt.colorcolumn = "100"
+    end
+end)
 
 --vim.keymap.set({"i", "n"}, "<F5>", "w:\n:!cargo run\n")
 

@@ -49,10 +49,31 @@ return {
 				end]]--
 			})
 
-			vim.cmd("colorscheme kanagawa")
+			--vim.cmd("colorscheme kanagawa")
 		end
-	}
-	--[[{
-		"rose-pine/neovim",
-	},]]--
+	},
+	{
+		"folke/tokyonight.nvim",
+		config = function()
+			require("tokyonight").setup({
+				transparent = true,
+				on_highlights = function(hl, colors)
+					hl.LineNr = {
+						fg = "#ffffff"
+					}
+					hl.LineNrAbove = {
+						fg = "#ffffff"
+					}
+					hl.LineNrBelow = {
+						fg = "#ffffff"
+					}
+					hl.CursorLineNr = {
+						fg = "#ffffff"
+					}
+				end
+			})
+
+			vim.cmd("colorscheme tokyonight")
+		end
+	},
 }
