@@ -32,10 +32,19 @@ vim.lsp.config["rust-analyzer"] = {
 		"rust",
 	},
 }
+vim.lsp.config["pylsp"] = {
+	cmd = {
+		"pylsp",
+	},
+	filetypes = {
+		"python",
+	},
+}
 
 vim.lsp.enable("lua-language-server")
 vim.lsp.enable("clangd")
 vim.lsp.enable("rust-analyzer")
+vim.lsp.enable("pylsp")
 
 vim.diagnostic.config({
 	virtual_text = true,

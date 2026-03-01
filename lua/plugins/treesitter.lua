@@ -7,6 +7,7 @@ vim.api.nvim_create_autocmd("FileType", {
 		"c",
 		"cpp",
 		"rust",
+		"python",
 	},
 	callback = function()
 		vim.treesitter.start()
