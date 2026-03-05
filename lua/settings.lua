@@ -12,5 +12,6 @@ vim.opt.wrap = false
 vim.opt.hlsearch = false
 
 vim.opt.undofile = true
+vim.opt.swapfile = false
 
 vim.cmd.packadd("nvim.undotree")
