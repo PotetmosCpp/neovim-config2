@@ -1,4 +1,3 @@
-require("plugins.blink")
 require("plugins.colorscheme")
 require("plugins.gitsigns")
 require("plugins.harpoon")

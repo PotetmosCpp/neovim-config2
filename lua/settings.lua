@@ -14,4 +14,7 @@ vim.opt.hlsearch = false
 vim.opt.undofile = true
 vim.opt.swapfile = false
 
+vim.opt.autocomplete = true
+-- almost works but i have to press C-x C-o for the lsp thing which is weird
+
 vim.cmd.packadd("nvim.undotree")
