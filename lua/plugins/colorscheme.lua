@@ -5,9 +5,9 @@ vim.pack.add({
 require("catppuccin").setup({
 	flavour = "mocha",
 	transparent_background = true,
-	float = {
+	--[[float = {
 		transparent = true,
-	},
+	},]]--
 })
 
 vim.cmd("colorscheme catppuccin")
