@@ -4,8 +4,8 @@ vim.pack.add({
 
 require("catppuccin").setup({
 	flavour = "mocha",
-	transparent_background = true,
-	--[[float = {
+	--[[transparent_background = true,
+	float = {
 		transparent = true,
 	},]]--
 })
