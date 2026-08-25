@@ -1,5 +1,6 @@
 require("plugins.blink")
 require("plugins.bufferline")
+require("plugins.codecompanion")
 require("plugins.colorscheme")
 require("plugins.gitsigns")
 --require("plugins.harpoon")
